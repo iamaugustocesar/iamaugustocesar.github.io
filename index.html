@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augusto César | Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Seletor de Tema Premium Dinâmico -->
+    <div class="theme-selector-container">
+        <label>🎨 Personalizar tom do ecossistema:</label>
+        <input type="range" id="theme-slider" min="190" max="240" value="215">
+    </div>
+
+    <div class="resume-container">
+        <!-- Cabeçalho Principal (Baseado na imagem 1000010218.jpg) -->
+        <header class="profile-header">
+            <div class="avatar-container">
+                <!-- Puxa automaticamente a sua foto atualizada do GitHub -->
+                <img src="https://github.com/iamaugustocesar.png" alt="Augusto César" class="profile-avatar">
+            </div>
+            
+            <h1 class="profile-name">Augusto César</h1>
+            <h2 class="profile-title">Software Engineer | Cloud Security & SaaS Architecture</h2>
+
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Recife - PE, Brasil</p>
+                <p><i class="fas fa-envelope"></i> seu-email@gmail.com</p>
+                <p><i class="fab fa-linkedin"></i> <a href="#" target="_blank">linkedin.com/in/seu-perfil</a></p>
+                <p><i class="fab fa-github"></i> <a href="#" target="_blank">github.com/iamaugustocesar</a></p>
+            </div>
+        </header>
+
+        <!-- Resumo Profissional (Baseado na imagem 1000010219.jpg) -->
+        <section class="section-container">
+            <h3 class="section-title">RESUMO PROFISSIONAL</h3>
+            <p class="summary-text">
+                Engenheiro de Software com sólida experiência no desenvolvimento de ecossistemas <strong>Full-Stack</strong> e arquitetura de aplicações <strong>SaaS</strong>. Especialista na implementação de governança corporativa baseada em <strong>ITIL</strong>, automação de processos em plataformas <strong>ServiceNow</strong> e gerenciamento de identidades e acessos (IAM) com <strong>SailPoint</strong>. Forte domínio do ambiente <strong>Microsoft Azure</strong>, aplicando as principais ferramentas internas de segurança e esteiras avançadas de desenvolvimento. Desenvolvedor focado em engenharia moderna, aplicando rigorosamente Clean Code e princípios SOLID.
+            </p>
+        </section>
+
+        <!-- Competências Divididas por Especialidade (Organização Padrão de Fábrica) -->
+        <section class="section-container">
+            <h3 class="section-title">DESENVOLVIMENTO FULL-STACK</h3>
+            <div class="badges-grid">
+                <span class="badge blue">Java</span>
+                <span class="badge blue">C# (.NET)</span>
+                <span class="badge blue">Python</span>
+                <span class="badge blue">HTML5 / CSS3</span>
+                <span class="badge gray">Clean Code</span>
+                <span class="badge gray">SOLID</span>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <h3 class="section-title">CLOUD, SEGURANÇA & GOVERNANÇA</h3>
+            <div class="badges-grid">
+                <span class="badge azure">Microsoft Azure</span>
+                <span class="badge azure">Azure DevOps</span>
+                <span class="badge azure">Azure Security Tools</span>
+                <span class="badge orange">ServiceNow</span>
+                <span class="badge orange">SailPoint (IAM)</span>
+                <span class="badge green">ITIL v4</span>
+                <span class="badge green">Metodologia Scrum</span>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <h3 class="section-title">SOLUÇÕES AVANÇADAS & PRODUTO</h3>
+            <div class="badges-grid">
+                <span class="badge purple">Desenvolvimento SaaS</span>
+                <span class="badge purple">Arquitetura de Aplicativos</span>
+                <span class="badge dark">IoT (Internet of Things)</span>
+                <span class="badge dark">Integração de Sistemas</span>
+            </div>
+        </section>
+
+        <!-- Histórico de Experiência (Baseado na imagem 1000010220.jpg) -->
+        <section class="section-container">
+            <h3 class="section-title">EXPERIÊNCIA PROFISSIONAL</h3>
+            
+            <div class="experience-item">
+                <h4 class="item-role">Senior Software Engineer & SaaS Architect</h4>
+                <p class="item-company">Enterprise Solutions & Cloud Architecture</p>
+                <span class="item-date">2024 - Atual</span>
+                <ul class="item-description">
+                    <li>Desenvolvimento de arquiteturas robustas para aplicações SaaS altamente escaláveis utilizando Java e C#.</li>
+                    <li>Implementação de políticas complexas de segurança da informação e esteiras automatizadas dentro do ecossistema Microsoft Azure.</li>
+                    <li>Sustentação, governança e integração contínua de plataformas corporativas utilizando ServiceNow e SailPoint.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Script de Interatividade Visual -->
+    <script>
+        const slider = document.getElementById('theme-slider');
+        slider.addEventListener('input', (e) => {
+            document.documentElement.style.setProperty('--theme-hue', e.target.value);
+        });
+    </script>
+</body>
+</html>
