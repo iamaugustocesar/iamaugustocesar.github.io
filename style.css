@@ -1,5 +1,5 @@
 :root {
-    --theme-hue: 215; /* Tom azul Azure corporativo */
+    --theme-hue: 215; 
     --bg-header: linear-gradient(135deg, hsl(var(--theme-hue), 90%, 14%) 0%, hsl(var(--theme-hue), 80%, 38%) 100%);
     --text-main: #1e293b;
     --border: #e2e8f0;
@@ -24,26 +24,43 @@ body { background-color: #f8fafc; color: var(--text-main); padding: 30px 10px; d
 .contact-info p { color: rgba(255,255,255,0.85); display: flex; align-items: center; gap: 8px; }
 .contact-info a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
 
+/* --- ESTILIZAÇÃO DO CARROSSEL EM MOVIMENTO (MARQUEE) --- */
+.marquee-section { background: #f1f5f9; padding: 15px 0; border-bottom: 1px solid var(--border); overflow: hidden; width: 100%; }
+.marquee-wrapper { display: flex; width: 100%; mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent); }
+.marquee-content { display: flex; gap: 40px; animation: scrollMarquee 18s linear infinite; padding-left: 20px; }
+.marquee-content i { font-size: 32px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease; }
+.marquee-content i:hover { transform: scale(1.25); }
+
+@keyframes scrollMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Estrutura dos Logos das Empresas com efeito Hover */
+.company-header { display: flex; align-items: center; gap: 15px; margin-bottom: 10px; }
+.company-logo-box { width: 45px; height: 45px; background: hsl(var(--theme-hue), 80%, 95%); color: hsl(var(--theme-hue), 80%, 35%); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(0,0,0,0.05); }
+.experience-item:hover .company-logo-box { transform: scale(1.1) rotate(5deg); background: hsl(var(--theme-hue), 80%, 35%); color: #fff; }
+.experience-item:hover .company-logo-box i.colored { color: #fff !important; }
+
 .section-container { padding: 30px 25px; border-bottom: 1px solid var(--border); }
 .section-container:last-child { border-bottom: none; }
 .section-title { font-size: 13px; font-weight: 800; color: hsl(var(--theme-hue), 80%, 22%); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; border-left: 4px solid hsl(var(--theme-hue), 80%, 40%); padding-left: 10px; }
 
 .badges-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-.badge { padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; border: 1px solid rgba(0,0,0,0.03); }
+.badge { padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 6px; border: 1px solid rgba(0,0,0,0.03); }
 
-/* Identidade visual por stack (Inspirado nas cores oficiais das marcas) */
-.badge.blue { background: #e0f2fe; color: #0369a1; }
-.badge.azure { background: #0078d4; color: #fff; } 
+.badge.azure { background: #e0f2fe; color: #0078d4; } 
 .badge.orange { background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; } 
 .badge.green { background: #f0fdf4; color: #166534; }
-.badge.gray { background: #f1f5f9; color: #475569; }
 .badge.purple { background: #f3e8ff; color: #6b21a8; }
-.badge.dark { background: #1e293b; color: #fff; }
+.badge.gray { background: #f1f5f9; color: #475569; }
 
 .summary-text, .item-description { font-size: 13.5px; line-height: 1.6; color: #334155; text-align: justify; }
-.experience-item { margin-top: 5px; }
 .item-role { font-size: 16px; font-weight: 700; color: #0f172a; }
 .item-company { font-size: 14px; color: hsl(var(--theme-hue), 80%, 35%); font-weight: 600; margin-top: 2px; }
-.item-date { font-size: 11px; color: #64748b; background: #f8fafc; padding: 2px 8px; border-radius: 10px; border: 1px solid var(--border); margin: 6px 0 12px; display: inline-block; }
+.item-date { font-size: 11px; color: #475569; background: #f1f5f9; padding: 2px 8px; border-radius: 10px; border: 1px solid var(--border); margin: 6px 0 12px; display: inline-block; font-weight: 600; }
 ul.item-description { padding-left: 18px; }
 ul.item-description li { margin-bottom: 6px; }
+
+/* Item de destaque para a conversão de estágio */
+.highlight-bullet { color: hsl(var(--theme-hue), 80%, 25%); font-weight: 600; background: hsl(var(--theme-hue), 80%, 97%); padding: 6px 10px; border-radius: 6px; border-left: 3px solid hsl(var(--theme-hue), 80%, 40%); list-style: none; margin-left: -18px; margin-top: 10px; }
